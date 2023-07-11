@@ -30,8 +30,8 @@ end
 
 #ticket = Ticket.new
 ticket = Ticket.new("Town Hall", "11/12/13")
-ticket.price=(63.00)
+ticket.price = 63.00
 puts "The ticket costs $#{"%.2f" %ticket.price}."
-ticket.price=(72.50)
+ticket.price = 72.50
 puts "Whoops -- it just went u. It now costs $#{"%.2f" %ticket.price}."
 
