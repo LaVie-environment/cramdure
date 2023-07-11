@@ -7,6 +7,10 @@ class Ticket
         @date = date
     end
 
+    def set_price(amount)
+        @price = amount
+    end
+
     def event
         "Can't really be specified yet..."
     end
@@ -18,13 +22,16 @@ class Ticket
     def date
         @date
     end
+
+    def price
+        @price
+    end
 end
 
 #ticket = Ticket.new
-th = Ticket.new("Town Hall", "11/12/13")
-cc = Ticket.new("Convention Center", "12/13/14")
-puts "We've created two tickets."
-puts "The first is for #{th.venue} event on #{th.date}."
-puts "The second is for an ebent on #{cc.date} at #{cc.venue}"
-#puts ticket.event
+ticket = Ticket.new("Town Hall", "11/12/13")
+ticket.set_price(63.00)
+puts "The ticket costs $#{"%.2f" %ticket.price}."
+ticket.set_price(72.50)
+puts "Whoops -- it just went u. It now costs $#{"%.2f" %ticket.price}."
 
