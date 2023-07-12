@@ -1,30 +1,12 @@
 #!/usr/bin/ruby
 
-
 class Ticket
+    attr_reader :venue, :date, :price
+    attr_writer :price
+
     def initialize(venue, date)
         @venue = venue
         @date = date
-    end
-
-    def price=(amount)
-        @price = amount
-    end
-
-    def event
-        "Can't really be specified yet..."
-    end
-
-    def venue
-        @venue
-    end
-
-    def date
-        @date
-    end
-
-    def price
-        @price
     end
 end
 
